@@ -28,9 +28,9 @@ select 发贴人,内容 from finance_comment_demov1  into outfile "outfile" fiel
 			<scope>test</scope>
 		</dependency>
 	
-	例子：
-		TestByHamcrest.java
-		TestByHamcrest2.java
+  例子：
+    TestByHamcrest.java
+    TestByHamcrest2.java
 ## 注意事项
-	测试时可能报告类似这个的异常java.lang.NoSuchMethodError: org.hamcrest.core.AllOf.allOf.这时只需将hamcrest.jar移到junit.jar的前面就可以了,否则组合条件如allOf、anyOff等都会抛此异常
+  测试时可能报告类似这个的异常java.lang.NoSuchMethodError: org.hamcrest.core.AllOf.allOf.这时只需将hamcrest.jar移到junit.jar的前面就可以了,否则组合条件如allOf、anyOff等都会抛此异常
  
