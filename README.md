@@ -36,3 +36,34 @@ select 发贴人,内容 from finance_comment_demov1  into outfile "outfile" fiel
 ## 注意事项
   测试时可能报告类似这个的异常java.lang.NoSuchMethodError: org.hamcrest.core.AllOf.allOf.这时只需将hamcrest.jar移到junit.jar的前面就可以了,否则组合条件如allOf、anyOff等都会抛此异常
  
+# logback 日志系统
+
+## logback介绍 
+  logback简单来说就是比log4j更好的日志库，Logback 分为三个模块：logback-core，logback-classic，logback-access。
+
+  * logback-core 是核心；
+  * logback-classic 改善了 log4j，且自身实现了 SLF4J API，所以即使用 Logback 你仍然可以使用其他的日志实现，如原始的 Log4J，java.util.logging 等；
+  * logback-access 让你方便的访问日志信息，如通过 http 的方式。
+
+## logback使用 
+ pom.xml:
+ 
+ 	<dependency>
+		<groupId>ch.qos.logback</groupId>
+		<artifactId>logback-classic</artifactId>
+		<version>1.1.2</version>
+	</dependency>
+	
+  同时引入的包有：slf4j-api-1.7.6.jar，logback-classic-1.1.2.jar，logback-core-1.1.2.jar。
+  
+  增加配置文件logback.xml
+  
+ 在程序中使用日志库
+ 
+	Logger logger = LoggerFactory.getLogger(TestLogback.class);
+
+	@Test
+	public void testLogDebug() {
+		logger.debug("doing my job by debug");
+	} 
+ 

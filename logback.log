@@ -1,0 +1,10 @@
+2014-08-05 15:03:19.118 [main] INFO  com.wankun.textsplit.TestLogback -
+				doing my job
+2014-08-05 15:03:19.122 [main] DEBUG com.wankun.textsplit.TestLogback -
+				doing my job
+2014-08-05 15:03:54.346 [main] INFO  com.wankun.textsplit.TestLogback - doing my job
+2014-08-05 15:03:54.350 [main] DEBUG com.wankun.textsplit.TestLogback - doing my job
+2014-08-05 15:05:12.035 [main] INFO  com.wankun.textsplit.TestLogback - doing my job by info
+2014-08-05 15:05:41.157 [main] INFO  com.wankun.textsplit.TestLogback -
+				doing my job by info
+2014-08-05 15:06:08.568 [main] INFO  com.wankun.textsplit.TestLogback - doing my job by info
