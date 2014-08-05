@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
 	<jmxConfigurator />
+	<!-- 以<configuration>开头，后面有零个或多个<appender>元素  -->
 	<!-- 控制台输出日志 -->
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<layout class="ch.qos.logback.classic.PatternLayout">
@@ -25,9 +26,23 @@
 		</layout>
 	</appender>
 	<!--这里指定logger name 是为jmx设置日志级别做铺垫 -->
+	<!-- 有零个或多个<logger>元素，有最多一个<root>元素 .
+		root 元素定义日志级别，日志输出方式等；
+		logger可以指定一个类的logger，也可以指定一个包的logger，特定logger可以重新指定日志级别，输出方式(输出方式为新增的输出，默认root还是会生效)等信息
+	 -->
+	<root level="INFO">  
+    	<appender-ref ref="STDOUT" />  
+  	</root>
+  	<!-- 
+	<logger name="com.wankun.textsplit.TestLogback" level="DEBUG">
+		<appender-ref ref="STDOUT" /> 
+		<appender-ref ref="FILE" />
+	</logger> --> 
+  	
 	<logger name="com.wankun.textsplit">
-		<level value="INFO" />
+		<level value="DEBUG" />
 		<appender-ref ref="STDOUT" />
 		<appender-ref ref="FILE" />
 	</logger>
+	 
 </configuration>

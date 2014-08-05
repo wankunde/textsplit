@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 
 public class TestLogback {
 
-	Logger logger = LoggerFactory.getLogger(TestLogback.class);
+	private final static Logger logger = LoggerFactory.getLogger(TestLogback.class);
 
 	@Test
 	public void testLogDebug() {
