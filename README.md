@@ -1,13 +1,20 @@
-## 原始数据准备
+# 项目说明
+  本项目根据某金融论坛的帖子内容进行分词。
+  
+  * 本项目使用ANSJ进行中文分词
+  * 使用hamcrest进行增强的单元测试
+  * 使用了maven打包，单元测试等多个插件进行项目管理
+  
+# 原始数据准备
 
 delete from finance_comment_demov1 where 证券代码='证券代码';
 select 发贴人,内容 from finance_comment_demov1  into outfile "outfile" fields terminated by '\t';
 
 
-### 使用Hamcrest增强JUnit的测试能力
-# 介绍
+# 使用Hamcrest增强JUnit的测试能力
+## 介绍
 	Hamcrest框架提供了一些相对通俗并高效的方法来进行一些junit比较困难的测试。  比如比较数值大小、测试对象类型、测试数组元素等等。
-# 实例：
+## 实例：
 	pom.xml:
 		<dependency>
 			<groupId>org.hamcrest</groupId>
@@ -24,6 +31,6 @@ select 发贴人,内容 from finance_comment_demov1  into outfile "outfile" fiel
 	例子：
 		TestByHamcrest.java
 		TestByHamcrest2.java
-# 注意事项
+## 注意事项
 	测试时可能报告类似这个的异常java.lang.NoSuchMethodError: org.hamcrest.core.AllOf.allOf.这时只需将hamcrest.jar移到junit.jar的前面就可以了,否则组合条件如allOf、anyOff等都会抛此异常
  
