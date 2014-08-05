@@ -13,7 +13,9 @@ select 发贴人,内容 from finance_comment_demov1  into outfile "outfile" fiel
 
 # 使用Hamcrest增强JUnit的测试能力
 ## 介绍
-	Hamcrest框架提供了一些相对通俗并高效的方法来进行一些junit比较困难的测试。  比如比较数值大小、测试对象类型、测试数组元素等等。
+  
+  Hamcrest框架提供了一些相对通俗并高效的方法来进行一些junit比较困难的测试。  比如比较数值大小、测试对象类型、测试数组元素等等。
+  
 ## 实例：
 	pom.xml:
 		<dependency>
