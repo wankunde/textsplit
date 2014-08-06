@@ -15,7 +15,7 @@ public class AppTest
 {
 	public static void main(String[] args) {
 		//String str = "本赛季德甲#Q球队霍芬海姆的两名年轻球员菲尔米诺和福兰德表现出色，但球队主帅吉斯多尔态度强硬。";
-		String str = "现在团购网站的团购项目真牛X。";
+		String str = "去年中国的GDP增长率为8.8%。";
 		System.out.println(ToAnalysis.parse(str));
 		System.out.println(NlpAnalysis.parse(str));
 		String res=ansjAnalyzerNature(str);

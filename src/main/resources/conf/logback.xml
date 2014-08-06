@@ -11,7 +11,7 @@
 	<!-- 文件输出日志 (文件大小策略进行文件输出，超过指定大小对文件备份) -->
 	<appender name="FILE"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<File>logback.log</File>
+		<File>logs/logback.log</File>
 		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
 			<FileNamePattern>logback.log.%i.bak</FileNamePattern>
 			<MinIndex>1</MinIndex>
