@@ -17,7 +17,7 @@ public class TestConfig {
 		configurator.setContext(lc);
 		lc.reset();
 		try {
-			configurator.doConfigure("conf/logback.xml");
+			configurator.doConfigure("target/conf/logback.xml");
 		} catch (JoranException e) {
 			System.out.println("加载logback配置文件失败！");
 			e.printStackTrace();
@@ -28,7 +28,5 @@ public class TestConfig {
 	
 	public static void main(String[] args) {
 		logger.info("doing my job by info");
-		System.out.println(new File("logback.xml").exists());
-		System.out.println(new File("conf/logback.xml").exists());
 	}
 }
