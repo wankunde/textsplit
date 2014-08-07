@@ -11,18 +11,19 @@ import ch.qos.logback.core.joran.spi.JoranException;
 
 public class TestConfig {
 
-	static {
-		LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
-		JoranConfigurator configurator = new JoranConfigurator();
-		configurator.setContext(lc);
-		lc.reset();
-		try {
-			configurator.doConfigure("target/conf/logback.xml");
-		} catch (JoranException e) {
-			System.out.println("加载logback配置文件失败！");
-			e.printStackTrace();
-		}
-	}
+//	static {
+//		LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
+//		JoranConfigurator configurator = new Joranonfigurator();
+//		configurator.setContext(lc);
+//		lc.reset();
+//		try {
+//			System.out.println(new File("conf/logback.xml").exists());
+//			configurator.doConfigure("conf/logback.xml");
+//		} catch (JoranException e) {
+//			System.out.println("加载logback配置文件失败！");
+//			e.printStackTrace();
+//		}
+//	}
 
 	private final static Logger logger = LoggerFactory.getLogger(TestConfig.class);
 	

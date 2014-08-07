@@ -70,14 +70,19 @@ select 发贴人,内容 from finance_comment_demov1  into outfile "outfile" fiel
 ## 当logback.xml不在根目录下时处理方式
   * 通过代码加载target目录下配置的方式：main和test均测试通过，但是路径会写死，不利于程序部署。
   * 通过maven-surefire-plugin插件，自动去寻找编译好的logback文件：main不可以，test类通过mvn test可以，在eclipse中不行。
-
-	 LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
-	 JoranConfigurator configurator = new JoranConfigurator();
-	 configurator.setContext(lc);
-	 lc.reset();
-	 try {
+```
+	LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
+	JoranConfigurator configurator = new JoranConfigurator();
+	configurator.setContext(lc);
+	lc.reset();
+	try {
 		configurator.doConfigure(&quot;target/conf/logback.xml&quot;);
-	 } catch (JoranException e) {
+	} catch (JoranException e) {
 		System.out.println(&quot;加载logback配置文件失败！&quot;);
 		e.printStackTrace();
-	 }
+	}
+```
+  * 通过Java命令行添加参数方式指定配置文件，在maven测试和eclipse环境不好弄，但是在命令行中允许可以。
+```
+	java -Dlogback.configurationFile=conf/logback.xml -jar textsplit-1.0.0.jar com.wankun.textsplit.TestConfig
+```
