@@ -5,12 +5,6 @@
   * 使用hamcrest进行增强的单元测试
   * 使用了maven打包，单元测试等多个插件进行项目管理
   
-# 原始数据准备
-
-delete from finance_comment_demov1 where 证券代码='证券代码';
-select 发贴人,内容 from finance_comment_demov1  into outfile "outfile" fields terminated by '\t';
-
-
 # 使用Hamcrest增强JUnit的测试能力
 ## 介绍
   
