@@ -1,7 +1,0 @@
-2014-08-06 17:33:39.029 [main] INFO  com.wankun.textsplit.TestConfig - doing my job by info
-2014-08-07 10:48:11.962 [main] INFO  com.wankun.textsplit.TestLogback - false
-2014-08-07 10:48:11.965 [main] DEBUG com.wankun.textsplit.TestLogback - doing my job by debug
-2014-08-07 10:48:11.966 [main] INFO  com.wankun.textsplit.TestLogback - doing my job by info
-2014-08-07 10:55:49.277 [main] INFO  com.wankun.textsplit.TestLogback - false
-2014-08-07 10:55:49.282 [main] DEBUG com.wankun.textsplit.TestLogback - doing my job by debug
-2014-08-07 10:55:49.283 [main] INFO  com.wankun.textsplit.TestLogback - doing my job by info
