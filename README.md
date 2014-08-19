@@ -6,7 +6,7 @@
   * 使用了maven打包，单元测试等多个插件进行项目管理
   
 # 使用Hamcrest增强JUnit的测试能力
-## 介绍
+### 介绍
   
   Hamcrest框架提供了一些相对通俗并高效的方法来进行一些junit比较困难的测试。  比如比较数值大小、测试对象类型、测试数组元素等等。
   
@@ -27,12 +27,12 @@
   例子：
     TestByHamcrest.java
     TestByHamcrest2.java
-## 注意事项
+### 注意事项
   测试时可能报告类似这个的异常java.lang.NoSuchMethodError: org.hamcrest.core.AllOf.allOf.这时只需将hamcrest.jar移到junit.jar的前面就可以了,否则组合条件如allOf、anyOff等都会抛此异常
  
 # logback 日志系统
 
-## logback介绍 
+### logback介绍 
   logback简单来说就是比log4j更好的日志库，Logback 分为三个模块：logback-core，logback-classic，logback-access。
 
   * logback-core 是核心；
@@ -82,7 +82,7 @@
 ```
 
 # Mockito 测试框架
-
+### 介绍 
   mock对象就是在调试期间用来作为真实对象的替代品。
   mock测试就是在测试过程中，对那些不容易构建的对象用一个虚拟对象来代替测试的方法就叫mock测试。
   实例：http://liuzhijun.iteye.com/blog/1512780
