@@ -18,7 +18,7 @@ import org.junit.Test;
  * 来源：{@link http://liuzhijun.iteye.com/blog/1512780}
  * 
  */
-public class SimpleTest {
+public class MockitoTest {
 
 	@Test
 	public void simpleTest() {
