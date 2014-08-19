@@ -80,3 +80,9 @@
 ```
 	java -Dlogback.configurationFile=conf/logback.xml -jar textsplit-1.0.0.jar com.wankun.textsplit.TestConfig
 ```
+
+# Mockito 测试框架
+
+  mock对象就是在调试期间用来作为真实对象的替代品。
+  mock测试就是在测试过程中，对那些不容易构建的对象用一个虚拟对象来代替测试的方法就叫mock测试。
+  实例：http://liuzhijun.iteye.com/blog/1512780
