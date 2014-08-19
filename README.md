@@ -10,7 +10,7 @@
   
   Hamcrest框架提供了一些相对通俗并高效的方法来进行一些junit比较困难的测试。  比如比较数值大小、测试对象类型、测试数组元素等等。
   
-## 实例：
+### 实例：
 	pom.xml:
 		<dependency>
 			<groupId>org.hamcrest</groupId>
@@ -39,7 +39,7 @@
   * logback-classic 改善了 log4j，且自身实现了 SLF4J API，所以即使用 Logback 你仍然可以使用其他的日志实现，如原始的 Log4J，java.util.logging 等；
   * logback-access 让你方便的访问日志信息，如通过 http 的方式。
 
-## logback使用 
+### logback使用 
  pom.xml:
  
  	<dependency>
@@ -61,7 +61,7 @@
 		logger.debug("doing my job by debug");
 	} 
  
-## 当logback.xml不在根目录下时处理方式
+### 当logback.xml不在根目录下时处理方式
   * 通过代码加载target目录下配置的方式：main和test均测试通过，但是路径会写死，不利于程序部署。
   * 通过maven-surefire-plugin插件，自动去寻找编译好的logback文件：main不可以，test类通过mvn test可以，在eclipse中不行。
 ```
